@@ -2,16 +2,23 @@
 <html>
 <head>
   <title>A Compliment</title>
+  <link rel="stylesheet" href="/static/madlibs.css">
 </head>
 <body>
-    Hi {{ person }}! I think you're {{ compliment }}!
+  <p>Hi {{ person }}! I think you're {{ compliment }}!</p>
+  <div>
     <form action="/game">
-      Would you like to play a game?
-      <input type="radio" name="game" id="game-yes">
-      <label for="game-yes">Yes</label>
-      <input type="radio" name="game" id="game-no">
-      <label for="game-no">No</label>
-      <input type="submit">
+      
+      <div>
+        <label class="input-label">Would you like to play a game?</label>
+        <input type="radio" name="game" id="game-yes" value="yes">
+        <label for="game-yes">Yes</label>
+        <input type="radio" name="game" id="game-no" value="no">
+        <label for="game-no">No</label>
+      </div>
+      
+      <input type="submit" class="submit-btn">
     </form>
+  </div>
 </body>
 </html>
