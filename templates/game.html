@@ -1,76 +1,73 @@
-<!doctype html>
-<html>
-<head>
-  <title>Game</title>
-  <link rel="stylesheet" href="/static/madlibs.css">
-</head>
-<body>
+{% extends 'base.html' %}
 
-<h1 id="game-heading">Let's Play a Game!</h1>
+{% block title %}Game{% endblock %}
 
-<form action="/madlib">
-    <div>
-        <label class="input-label" for="person">Enter a person's name:</label> 
-        <input type="text" name="person" id="person">
-    </div>
-  
-    <div>
-        <label class="input-label" for="color">Please choose a color:</label>
-        <select name="color" id="color">
-            <option value="red">Red</option>
-            <option value="orange">Orange</option>
-            <option value="yellow">Yellow</option>
-            <option value="green">Green</option>
-            <option value="blue">Blue</option>
-            <option value="indigo">Indigo</option>
-            <option value="violet">Violet</option>
-        </select>
-    </div>
+{% block content %}
 
-    <div>
-        <label class="input-label" for="noun">Enter a noun:</label> 
-        <input type="text" name="noun" id="noun">
-    </div>
+    <h1 id="game-heading">Let's Play a Game!</h1>
 
-    <div>
-        <label class="input-label" for="adjective">Enter an adjective:</label> 
-        <input type="text" name="adjective" id="adjective">
-    </div>
+    <form action="/madlib">
+        <div>
+            <label class="input-label" for="person">Enter a person's name:</label> 
+            <input type="text" name="person" id="person">
+        </div>
+    
+        <div>
+            <label class="input-label" for="color">Please choose a color:</label>
+            <select name="color" id="color">
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="indigo">Indigo</option>
+                <option value="violet">Violet</option>
+            </select>
+        </div>
 
-    <div>
-        <label class="input-label">Please choose a verb:</label>
-        <input type="checkbox" name="verbs" value="screaming" id="screaming">
-        <label for="screaming">Screaming</label>
-        <input type="checkbox" name="verbs" value="running" id="running">
-        <label for="running">Running</label>
-        <input type="checkbox" name="verbs" value="crying" id="crying">
-        <label for="crying">Crying</label>
-    </div>
+        <div>
+            <label class="input-label" for="noun">Enter a noun:</label> 
+            <input type="text" name="noun" id="noun">
+        </div>
 
-    <div>
-        <label class="input-label">Please choose a catastrophe:</label>
+        <div>
+            <label class="input-label" for="adjective">Enter an adjective:</label> 
+            <input type="text" name="adjective" id="adjective">
+        </div>
 
-        <input type="radio" name="catastrophe" value="hurricane" id="hurricane">
-        <label for="hurricane">Hurricane</label>
+        <div>
+            <label class="input-label">Please choose a verb:</label>
+            <input type="checkbox" name="verbs" value="screaming" id="screaming">
+            <label for="screaming">Screaming</label>
+            <input type="checkbox" name="verbs" value="running" id="running">
+            <label for="running">Running</label>
+            <input type="checkbox" name="verbs" value="crying" id="crying">
+            <label for="crying">Crying</label>
+        </div>
 
-        <input type="radio" name="catastrophe" value="earthquake" id="earthquake">
-        <label for="earthquake">Earthquake</label>
+        <div>
+            <label class="input-label">Please choose a catastrophe:</label>
 
-        <input type="radio" name="catastrophe" value="tornado" id="tornado">
-        <label for="tornado">Tornado</label>
-    </div>
+            <input type="radio" name="catastrophe" value="hurricane" id="hurricane">
+            <label for="hurricane">Hurricane</label>
 
-    <div>
-        <label class="input-label">Please select a superhero:</label>
-        <select name="superhero">
-            <option value="Superman">Superman</option>
-            <option value="Gordon Ramsey">Gordon Ramsey</option>
-            <option value="Dr. Phil">Dr. Phil</option>
-        </select>
-    </div>
+            <input type="radio" name="catastrophe" value="earthquake" id="earthquake">
+            <label for="earthquake">Earthquake</label>
 
-  <input type="submit">
-</form>
+            <input type="radio" name="catastrophe" value="tornado" id="tornado">
+            <label for="tornado">Tornado</label>
+        </div>
 
-</body>
-</html>
+        <div>
+            <label class="input-label">Please select a superhero:</label>
+            <select name="superhero">
+                <option value="Superman">Superman</option>
+                <option value="Gordon Ramsey">Gordon Ramsey</option>
+                <option value="Dr. Phil">Dr. Phil</option>
+            </select>
+        </div>
+
+    <input type="submit">
+    </form>
+
+{% endblock %}

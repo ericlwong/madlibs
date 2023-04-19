@@ -1,17 +1,14 @@
-<!doctype html>
-<html>
-<head>
-  <title>Madlib</title>
-  <link rel="stylesheet" href="/static/madlibs.css">
-</head>
-<body>
+{% extends 'base.html' %}
 
-<p>
-  Today {{ person }} and I are heading to Sky Island. We got some {{ noun }} for the flight and arrived at the gate. 
-  Once we boarded the {{ color }} plane, I was sitting next to a very {{ adjective }} man. 
-  He spent the entire flight {{ verbs }} and talking about his job as {{ superhero }}. 
-  Whenever I tried to sleep, he would step around me to watch the {{ catastrophe }} outside the window.
-</p>
+{% block title %}Madlib{% endblock %}
 
-</body>
-</html>
+{% block content %}
+
+  <p>
+    Today {{ person }} and I are heading to Sky Island. We got some {{ noun }} for the flight and arrived at the gate. 
+    Once we boarded the {{ color }} plane, I was sitting next to a very {{ adjective }} man. 
+    He spent the entire flight {{ verbs }} and talking about his job as {{ superhero }}. 
+    Whenever I tried to sleep, he would step around me to watch the {{ catastrophe }} outside the window.
+  </p>
+
+{% endblock %}

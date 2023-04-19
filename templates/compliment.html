@@ -1,11 +1,15 @@
-<!doctype html>
-<html>
-<head>
-  <title>A Compliment</title>
-  <link rel="stylesheet" href="/static/madlibs.css">
-</head>
-<body>
-  <p>Hi {{ person }}! I think you're {{ compliment }}!</p>
+{% extends 'base.html' %}
+  
+{% block title %}A Compliment{% endblock %}
+
+{% block content %}
+
+  <p>Hi {{ person }}! I think you're:</p>
+  <ul>
+    {% for compliment in compliments %}
+      <li>{{ compliment }}</li>
+    {% endfor %}
+  </ul>
   <div>
     <form action="/game">
       
@@ -20,5 +24,5 @@
       <input type="submit" class="submit-btn">
     </form>
   </div>
-</body>
-</html>
+
+{% endblock %}

@@ -1,18 +1,15 @@
-<!doctype html>
-<html>
-<head>
-  <title>Madlib</title>
-  <link rel="stylesheet" href="/static/madlibs.css">
-</head>
-<body>
+{% extends 'base.html' %}
 
-<p>
-    There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
-    When {{ person }} went to pick it up, it burst into flames in a totally
-    {{ adjective }} way. Everyone started {{ verbs }}! Before everyone could
-    escape, a {{ catastrophe }} appeared! Luckily, {{ superhero }} arrived
-    just in time and saved the day.
-</p>
+{% block title %}Madlib{% endblock %}
 
-</body>
-</html>
+{% block content %}
+
+  <p>
+      There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
+      When {{ person }} went to pick it up, it burst into flames in a totally
+      {{ adjective }} way. Everyone started {{ verbs }}! Before everyone could
+      escape, a {{ catastrophe }} appeared! Luckily, {{ superhero }} arrived
+      just in time and saved the day.
+  </p>
+
+{% endblock %}
