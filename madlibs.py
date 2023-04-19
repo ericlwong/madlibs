@@ -68,7 +68,7 @@ def show_madlib():
     color = request.args.get("color")
     noun = request.args.get("noun")
     adjective = request.args.get("adjective")
-    verbs = request.args.get("verbs")
+    verbs = request.args.getlist("verbs")
     catastrophe = request.args.get("catastrophe")
     superhero = request.args.get("superhero")
 

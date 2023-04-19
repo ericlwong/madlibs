@@ -7,7 +7,10 @@
   <p>
       There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
       When {{ person }} went to pick it up, it burst into flames in a totally
-      {{ adjective }} way. Everyone started {{ verbs }}! Before everyone could
+      {{ adjective }} way. Everyone started 
+      {% for verb in verbs %}
+        {{ verb }}
+      {% endfor %}! Before everyone could
       escape, a {{ catastrophe }} appeared! Luckily, {{ superhero }} arrived
       just in time and saved the day.
   </p>
