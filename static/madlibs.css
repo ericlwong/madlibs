@@ -1,5 +1,18 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: beige;
+}
+
+#game-heading {
+    color: darkblue;
+}
+
+#goodbye-heading {
+    color: darkgreen;
+}
+
+#hello-heading{
+    color: midnightblue;
 }
 
 h1 {
@@ -12,4 +25,12 @@ h1 {
 
 .input-label {
     font-weight: bold;
+}
+
+label[for="game-yes"] {
+    color: darkgreen;
+}
+
+label[for="game-no"] {
+    color: red;
 }
