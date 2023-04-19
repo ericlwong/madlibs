@@ -25,6 +25,7 @@ AWESOMENESS = [
     "lovely",
 ]
 
+MADLIBS = ["madlib.html", "madlibtwo.html", "madlibthree.html"]
 
 @app.route("/")
 def start_here():
@@ -71,7 +72,9 @@ def show_madlib():
     catastrophe = request.args.get("catastrophe")
     superhero = request.args.get("superhero")
 
-    return render_template("madlib.html", person=person, color=color, noun=noun, adjective=adjective, 
+    madlib = choice(MADLIBS)
+
+    return render_template(madlib, person=person, color=color, noun=noun, adjective=adjective, 
                            verbs=verbs, catastrophe=catastrophe, superhero=superhero)
 
 
